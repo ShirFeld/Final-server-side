@@ -21,8 +21,8 @@ public class Q3 {
     }
 
     public static void main(String[] args) {
-        System.out.println("hi");
+        System.out.println("The beginning");
         factorial(4);
-        System.out.println("bye");
+        System.out.println("The end");
     }
 }
