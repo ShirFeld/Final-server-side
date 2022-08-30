@@ -21,10 +21,10 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Human{" +
-                "fullName='" + fullName + '\'' +
-                ", descendants=" + descendants +
-                '}';
+        return "Human:(" +
+                " fullName = " + fullName + '\'' +
+                ", descendants = " + descendants + ')'
+                ;
     }
 
 
