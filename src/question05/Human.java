@@ -7,24 +7,26 @@ import java.util.stream.Collectors;
 
 public class Human {
     public String fullName;
-    public static List<Human> humanList = new ArrayList<>();
+    public List<Human> descendants = new ArrayList<>();
 
     public Human(String fullName) {
         this.fullName = fullName;
-        humanList.add(this);
+    }
+
+    public Human(String fullName, Human ancestor) {
+        this(fullName);
+        ancestor.descendants.add(this); //the parent add the child to his list.
+
     }
 
     @Override
     public String toString() {
-        return "Human {" +
+        return "Human{" +
                 "fullName='" + fullName + '\'' +
+                ", descendants=" + descendants +
                 '}';
-   }
+    }
 
-   public static void print(){
-        if (humanList.size() >0)
-            System.out.println(humanList);
-   }
 
 
     public static void main(String[] args) {
@@ -49,8 +51,8 @@ public class Human {
         System.out.println();
         System.out.println("\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\");
         Human h1 = new Human("shir");
-        Human h2 = new Human("david");
-        Human h3 = new Human("Michael");
-        Human.print();
+        Human h2 = new Human("david" , h1);
+        System.out.println(h1);
+        System.out.println(h2);
     }
 }
