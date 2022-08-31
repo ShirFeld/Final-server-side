@@ -30,9 +30,3 @@ public class SharedResources {
 
 
 
-/*
-1. min = 0 , אם המשתמש החליט שהמספר שהוא מעביר יהיה 0 אז אנחנו לא נגיע בכלל לקריאה של המשתנה שלנו.
-2. max = numOfIterations
-3.
-is not an atomic operation , הגישה למשתנה היא לא מסונכרנת
- */
